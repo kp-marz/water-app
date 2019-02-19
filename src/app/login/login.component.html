@@ -1,0 +1,16 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <div class="login-form">
+    <mat-form-field class="login-full-width">
+      <input matInput placeholder="username"  formControlName="userName" required>
+    </mat-form-field>
+  
+    <mat-form-field class="login-full-width">
+      <input matInput type="password" placeholder="password" formControlName="password" required>
+    </mat-form-field>
+  </div>
+  
+  <button type="submit" mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
+  
+  </form>
+  <br>
+  <div><a routerLink="/forgot-password" routerLinkActive="active">Forgot Password</a></div>
