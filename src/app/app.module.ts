@@ -14,6 +14,9 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule, MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import {MatIconModule} from '@angular/material/icon';
     LoginComponent,
     DashboardComponent,
     SignUpComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,10 @@ import {MatIconModule} from '@angular/material/icon';
     CommonModule,
     HttpClientModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
